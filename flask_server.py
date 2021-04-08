@@ -1,11 +1,11 @@
 from flask import Flask,redirect,url_for,render_template
-# import utils
+import utils
 app=Flask(__name__)
 
 
 @app.route("/")
 def homePage():
-    my="mr my name is navin"
+    my=utils.amazon()
     return  render_template("index.html",me=my)
 
 

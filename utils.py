@@ -1,4 +1,5 @@
-# from selenium import webdriver
+from selenium import webdriver
+import os
 # from selenium.webdriver.common.keys import Keys
 # from selenium.webdriver.chrome.options import Options
 # import time
@@ -9,6 +10,15 @@
 # options.add_argument("headless")
 # driver=webdriver.Chrome(PATH,options=options)
 
+op=webdriver.ChromeOptions()
+op.binary_location=os.environ.get("GOOGLE_CHROME_BIN")
+op.add_argument("--headless")
+op.add_argument("--no-sandbox")
+op.add_argument("--disable-dev-sh-usage")
+
+driver=webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"),chrome_options=op)
+
+
 
 
 ecomerce_webs=["https://www.amazon.com/","https://www.aliexpress.com/"]
@@ -17,6 +27,6 @@ ecomerce_webs=["https://www.amazon.com/","https://www.aliexpress.com/"]
 #     driver.get(website)
 
 def amazon():
-    # driver.get(ecomerce_webs[0])
-    return ecomerce_webs[0]
+    driver.get(ecomerce_webs[0])
+    return driver.title
 

@@ -18,6 +18,6 @@ for website in ecomerce_webs:
     print(driver.title)
 
 def amazon():
-    driver.get(ecomerce_webs[0])
-    return driver.title
+    # driver.get(ecomerce_webs[0])
+    return ecomerce_webs[0]
 

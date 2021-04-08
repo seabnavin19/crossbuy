@@ -5,7 +5,7 @@ app=Flask(__name__)
 
 @app.route("/")
 def homePage():
-    my="mr"
+    my="mr my name is navin"
     return  render_template("index.html",me=my)
 
 

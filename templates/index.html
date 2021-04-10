@@ -1,11 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>{{me}}</h1>
+{% extends "navbar.html" %}
+{% block content %}
+<header class="bg-primary text-white">
+    <div class="container text-center ">
+      <h1>SmartBuy.ai</h1>
+      <p class="lead">Automate buying things online</p>
+		<!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
 
-</body>
-</html>
+<div id="mc_embed_signup">
+<form action="https://kit.us1.list-manage.com/subscribe/post?u=426d3851754b33a6afeed18ac&amp;id=5c2b2e000a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Subscribe Now to get free trial</label>
+	<input type="email" value="" name="EMAIL" class="email " id="mce-EMAIL" placeholder="email address" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_426d3851754b33a6afeed18ac_5c2b2e000a" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button bg-dark"></div>
+    </div>
+</form>
+</div>
+
+<!--End mc_embed_signup-->
+    </div>
+  </header>
+
+<section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>What is SmartBuy.ai ?</h2>
+          <p class="lead">SmartBuy.ai is a platform that use AI and Natural Language Processing to help people buying things Online faster and  convenient.  </p>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <section id="services" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Services we offer</h2>
+<!--          <p class="lead">We use Natural Language Processing to understand what user really need to find all possible and alternative products. Then use machine learning algorithm to buy the best product</p>-->
+			<p class="lead">These are Our Product Features: </p>
+			 <ul>
+            <li>Using NLP to Understand what buyers really need.</li>
+            <li>Buying across multiple e-commerce.</li>
+            <li>Using Content base Recommendation System to recommend the best product for users</li>
+            <li>Users can use "let's Buy" feature to allow our system to buy.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Contact us</h2>
+          <p class="lead">FaceBook: SmartBuy.ai</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

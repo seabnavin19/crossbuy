@@ -5,7 +5,7 @@ app=Flask(__name__)
 
 @app.route("/")
 def homePage():
-    my=utils.amazon()
+    my="HI"
     return  render_template("index.html",me=my)
 
 
